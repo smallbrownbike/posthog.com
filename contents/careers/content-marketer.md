@@ -1,29 +1,31 @@
 ---
-title: Growth Engineer
+title: Content Marketer
 sidebar: Careers
 showTitle: true
 ---
 ## PostHog exists to increase the number of successful products in the world.
 
-We provide an open source platform for product analytics. The product is new - we launched in February 2020, and have had thousands of deployments organically since we started.
+While we have mainly hired engineers to date, we are now growing across all areas of the business and we are currently hiring for our first Content Marketer to work alongside our newly hired Marketing Lead.
 
-This growth has meant we've been able to raise significant investment from the best in the world, such as YCombinator, and we're now ready to build our first growth team, and we need the first person on that team! You will play an instrumental role in establishing culture and in guiding how we conduct experimentation.
+**What you'll be be doing:**
 
-This role will be focused on increasing our company's most important metrics. We use Acquisition, Activation, Retention, Revenue, Referral (AARRR) as a framework, and you'd be responsible for everything outside Retention which is the focus of our core engineering team. You'd collaborate with our marketing team on acquisition. Activation and Referral you'd collaborate with our product and design team.
-
-Since this is the first person in this type of role, you will need product and design thinking, the ability to implement, and basic data analysis skills.
+- Creating top-of-funnel technical content marketing such as tutorials, blog posts, infographics, eBooks, web pages, white papers, and reports that attract new developers to PostHog.
+- Working with our marketing, product and development teams and community to translate messaging into innovative and timely content ideas and manage content production from start to finish.
+- Growing and maintaining our content schedule around user personas and segments.
+- Working with our marketing team to analyze how your content performs and decide how to adjust our content strategy accordingly.
 
 ## What you'll bring:
-* Breadth - we're at the big changes, not a ton of data stage. This isn't about tweaking the placement of buttons. You'll need to be able to derive insight from talking to people, your own knowledge of best practices and the limited data we have.
-* You'll need to be quick. The ability to continuously design, build and test fast.
-* A track record of running growth experiments, at both early stage and scale up stage companies experiencing hypergrowth.
-* We don't need deep engineering skills, but you'll need to be a reasonable software engineer.
-* You need to be ready to lead the function. Someone who can be a true partner and can tell us what to do. Perhaps you've been working for a VP Growth before and want to take the next step towards that role yourself.
+
+- Experience working as a technical content marketer creating top-of-funnel content for developers.
+- Excellent writing, researching and communication skills.
+- Experience coming up with innovative and timely content ideas and producing well-written content to a content schedule.
+- A detail-orientated and organized approach to work with a desire to move quickly and constantly improve yourself and your team.
+- Experience creating content for an open source product is desirable but not critical.
 
 ## What we offer in return:
 * Generous [compensation](/handbook/people/compensation)
 * [Unlimited, permissionless vacation](/handbook/people/time-off) with a 25 day minimum
-* Health insurance provided or the cost covered depending on jurisdiction
+* Health insurance, including dental and vision (UK and US-based only)
 * [Generous parental leave](/handbook/people/time-off)
 * Visa sponsorship if needed, for you and your loved ones
 * [Training budget](/handbook/people/training)
@@ -37,7 +39,7 @@ Since this is the first person in this type of role, you will need product and d
 
 PostHog's engineering culture is best-in-class, and we've had explosive user growth from this alone.
 
-We [launched a four week old minimum viable product in February](/handbook/company/story), and since then have been deployed in thousands of places around the world.
+We [launched a four week old minimum viable product in February 2020](/handbook/company/story), and since then have been deployed in thousands of places around the world.
 
 PostHog's platform makes it easy for software teams to understand their user behavior. This coupled with our fast growth has led to a broad variety of very cool use cases. PostHog is used to help indie game designers make it more fun to defend earth from an alien threat. PostHog is used by multinational organizations running software that powers everything from banks to airlines. PostHog is used by startups disrupting their own industries.
 
@@ -58,10 +60,11 @@ We take bets on people with less experience too - we are as willing to hire an u
 We're all remote, and we've raised enough to pay top of market. [We’re are proudly backed](/handbook/strategy/investors) by some of the best VCs and Investors in the world, such as YCombinator.
 
 ## Sold? Apply now
-* [Drop us a line](mailto:3EC3DCE01D@jobs.workablemail.com) and tell us:
+* [Drop us a line](mailto:CBEF343B79@jobs.workablemail.com) and tell us:
 * How you can achieve the above in a few sentences
 * Why you're drawn to us
 * Your resumé and/or LinkedIn
+* Please also add a link to your portfolio or examples of previous work
 
 ## Not sold? Learn more first
 * [How we hire](/careers#the-process)
@@ -70,5 +73,3 @@ We're all remote, and we've raised enough to pay top of market. [We’re are pro
 * Getting hiring right is key to diversity. Learn about [how we think about this](/handbook/company/diversity).
  
 *We believe people from diverse backgrounds, with different identities and experiences, make our product and our company better. No matter your background, we'd love to hear from you! Also, if you have a disability, please let us know if there's any way we can make the interview process better for you; we're happy to accommodate!*
-
-

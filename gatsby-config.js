@@ -19,20 +19,26 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        `gatsby-plugin-mdx`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `contents`,
+                path: `${__dirname}/contents`,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-mdx',
+            options: {
+                gatsbyRemarkPlugins: [`gatsby-remark-static-images`],
+                plugins: [`gatsby-remark-static-images`],
+            },
+        },
         `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `menuItems`,
                 path: `${__dirname}/src/menuItems`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `contents`,
-                path: `${__dirname}/contents`,
             },
         },
         {

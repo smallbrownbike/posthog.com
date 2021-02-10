@@ -74,14 +74,15 @@
             "docs/deployment",
             "docs/deployment/deploy-heroku",
             "docs/deployment/deploy-aws",
+            "docs/deployment/deploy-docker",
+            "docs/deployment/deploy-source",
             "docs/deployment/deploy-azure",
             "docs/deployment/deploy-digital-ocean",
-            "docs/deployment/deploy-docker",
             "docs/deployment/deploy-gcs",
             "docs/deployment/deploy-kubernetes",
             "docs/deployment/deploy-linode",
             "docs/deployment/deploy-render",
-            "docs/deployment/deploy-source",
+            "docs/deployment/deploy-qovery",
             "docs/deployment/snippet-installation",
             "docs/deployment/hosting-costs"
         ]
@@ -122,9 +123,7 @@
             "docs/plugins/enabling",
             "docs/plugins/architecture",
             "docs/plugins/build",
-            "docs/plugins/types",
-            "docs/plugins/maxmind",
-            "docs/plugins/currency-normalization"
+            "docs/plugins/types"
         ]
     },
     {
@@ -267,7 +266,8 @@
             "handbook/company/security",
             "handbook/company/branding",
             "handbook/company/team",
-            "handbook/company/management"
+            "handbook/company/management",
+            "handbook/company/standups"
         ]
     },
     {
@@ -295,9 +295,10 @@
         "name": "Open Roles",
         "items": [
             "careers/full-stack-software-engineer",
-            "careers/growth-engineer",
             "careers/senior-fs-software-engineer",
-            "careers/customer-success-lead"
+            "careers/site-reliability-engineer",
+            "careers/customer-success-lead",
+            "careers/content-marketer"
         ]
     },
     {
@@ -338,7 +339,8 @@
             "handbook/engineering/setup-ssl-locally",
             "handbook/engineering/ee-setup",
             "handbook/engineering/common-issues",
-            "handbook/engineering/support-hero"
+            "handbook/engineering/support-hero",
+            "handbook/engineering/mdx"
         ]
     },
     {

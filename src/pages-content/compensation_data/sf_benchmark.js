@@ -3,9 +3,11 @@
 const sf_benchmark = {
     Designer: 128400,
     Engineer: 192000,
-    'Growth Engineer': 192000,
+    //'Growth Engineer': 192000,
     'Product Designer': 174000,
-    'Customer Success Lead': 150000,
+    'Customer Success Lead': 190000,
+    'Site Reliability Engineer': 170000,
+    'Content Marketer': 165000,
     //Recruiter: 144000,
     //'Technical Writer': 138000,
 }
