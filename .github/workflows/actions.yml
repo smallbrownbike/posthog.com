@@ -1,0 +1,24 @@
+name: Strapi sync
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+            - name: Get changed Markdown files
+              id: changed-files-specific
+              uses: tj-actions/changed-files@v35
+              with:
+                  files: contents/**/*.{md,mdx}
+                  json: 'true'
+            - name: List all changed files
+              run: |
+                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+                    echo "$file was changed"
+                  done
