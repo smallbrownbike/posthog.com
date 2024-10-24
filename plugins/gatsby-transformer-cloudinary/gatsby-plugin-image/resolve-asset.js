@@ -153,5 +153,5 @@ exports.createResolveCloudinaryAssetData = (gatsbyUtils) => async (source, args,
         )
     }
 
-    return generateImageData(assetDataArgs)
+    return null
 }
