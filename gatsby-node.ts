@@ -12,7 +12,7 @@ export { onPreBootstrap } from './gatsby/onPreBootstrap'
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
 export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions }) => {
-    const { createPage, deletePage } = actions
+    const { createPage } = actions
     if (page.path.match(/^\/community\/profiles/)) {
         page.matchPath = '/community/profiles/*'
         createPage(page)
@@ -21,15 +21,6 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = async ({ page, actions }
         page.matchPath = '/next-steps/*'
         createPage(page)
     }
-
-    deletePage(page)
-
-    const newPath = page.path === '/' ? '/index.html' : `${page.path}.html`
-
-    createPage({
-        ...page,
-        path: newPath,
-    })
 }
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ stage, actions }) => {

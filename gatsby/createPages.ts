@@ -359,7 +359,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
             })
 
             createPage({
-                path: `${replacePath(slug)}.html`,
+                path: replacePath(slug),
                 component: template,
                 context: {
                     id: node.id,
@@ -402,7 +402,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
                 base,
             }
             createPage({
-                path: i === 0 ? `${base}.html` : `${base}/${i + 1}.html`,
+                path: i === 0 ? base : `${base}/${i + 1}`,
                 component: template,
                 context,
             })
@@ -486,7 +486,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
         result.data.allMdx.nodes.forEach((node) => {
             createPage({
-                path: `${replacePath(node.slug)}.html`,
+                path: replacePath(node.slug),
                 component: PlainTemplate,
                 context: {
                     id: node.id,
@@ -515,7 +515,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         result.data.postCategories.nodes.forEach(
             ({ attributes: { folder: categoryFolder, label: categoryLabel, post_tags } }) => {
                 createPage({
-                    path: `/${categoryFolder}.html`,
+                    path: `/${categoryFolder}`,
                     component: PostListingTemplate,
                     context: {
                         post: true,
@@ -526,7 +526,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
                 post_tags?.data?.forEach(({ attributes: { label: tagLabel } }) => {
                     createPage({
-                        path: `/${categoryFolder}/${slugify(tagLabel, { lower: true, strict: true })}.html`,
+                        path: `/${categoryFolder}/${slugify(tagLabel, { lower: true, strict: true })}`,
                         component: PostListingTemplate,
                         context: {
                             selectedTag: tagLabel,
@@ -548,7 +548,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
-            path: `${replacePath(slug)}.html`,
+            path: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -564,7 +564,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
-            path: `${replacePath(slug)}.html`,
+            path: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -580,7 +580,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
-            path: `${replacePath(slug)}.html`,
+            path: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -593,7 +593,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
     })
 
     createPage({
-        path: `/posts.html`,
+        path: `/posts`,
         component: PostListingTemplate,
         context: {
             post: true,
@@ -606,7 +606,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
-            path: `${replacePath(slug)}.html`,
+            path: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -622,7 +622,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
-            path: `${replacePath(slug)}.html`,
+            path: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -638,7 +638,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const { documentation } = node.frontmatter
         createPage({
-            path: `${slug}.html`,
+            path: slug,
             component: AppTemplate,
             context: {
                 id: node.id,
@@ -651,7 +651,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         const { documentation } = node.frontmatter
         createPage({
-            path: `${slug}.html`,
+            path: slug,
             component: PipelineTemplate,
             context: {
                 id: node.id,
@@ -663,7 +663,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
     result.data.templates.nodes.forEach((node) => {
         const { slug } = node.fields
         createPage({
-            path: `${slug}.html`,
+            path: slug,
             component: DashboardTemplate,
             context: {
                 id: node.id,
@@ -699,7 +699,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
                 }
             }
             createPage({
-                path: `${slug}.html`,
+                path: slug,
                 component: Job,
                 context: {
                     id,
@@ -715,7 +715,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
     result.data.roadmapYears.group.forEach(({ fieldValue: year }) => {
         createPage({
-            path: `/changelog/${year}.html`,
+            path: `/changelog/${year}`,
             component: ChangelogTemplate,
             context: {
                 year: Number(year),
@@ -725,7 +725,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
     result.data.teams.nodes.forEach(({ id, frontmatter: { title }, fields: { slug } }) => {
         createPage({
-            path: `${slug}.html`,
+            path: slug,
             component: TeamTemplate,
             context: {
                 id,
