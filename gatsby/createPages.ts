@@ -61,7 +61,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
                     rawBody
                 }
             }
-            apidocs: allApiEndpoint {
+            apidocs: allApiEndpoint(filter: { name: { ne: "environments" } }) {
                 nodes {
                     id
                     name
