@@ -360,6 +360,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
             createPage({
                 path: `${replacePath(slug)}.html`,
+                matchPath: replacePath(slug),
                 component: template,
                 context: {
                     id: node.id,
@@ -403,6 +404,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
             }
             createPage({
                 path: i === 0 ? `${base}.html` : `${base}/${i + 1}.html`,
+                matchPath: i === 0 ? base : `${base}/${i + 1}`,
                 component: template,
                 context,
             })
@@ -487,6 +489,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         result.data.allMdx.nodes.forEach((node) => {
             createPage({
                 path: `${replacePath(node.slug)}.html`,
+                matchPath: replacePath(node.slug),
                 component: PlainTemplate,
                 context: {
                     id: node.id,
@@ -516,6 +519,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
             ({ attributes: { folder: categoryFolder, label: categoryLabel, post_tags } }) => {
                 createPage({
                     path: `/${categoryFolder}.html`,
+                    matchPath: `/${categoryFolder}`,
                     component: PostListingTemplate,
                     context: {
                         post: true,
@@ -527,6 +531,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
                 post_tags?.data?.forEach(({ attributes: { label: tagLabel } }) => {
                     createPage({
                         path: `/${categoryFolder}/${slugify(tagLabel, { lower: true, strict: true })}.html`,
+                        matchPath: `/${categoryFolder}/${slugify(tagLabel, { lower: true, strict: true })}`,
                         component: PostListingTemplate,
                         context: {
                             selectedTag: tagLabel,
@@ -549,6 +554,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
             path: `${replacePath(slug)}.html`,
+            matchPath: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -565,6 +571,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
             path: `${replacePath(slug)}.html`,
+            matchPath: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -581,6 +588,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
             path: `${replacePath(slug)}.html`,
+            matchPath: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -594,6 +602,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
 
     createPage({
         path: `/posts.html`,
+        matchPath: `/posts`,
         component: PostListingTemplate,
         context: {
             post: true,
@@ -607,6 +616,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
             path: `${replacePath(slug)}.html`,
+            matchPath: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -623,6 +633,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const tableOfContents = node.headings && formatToc(node.headings)
         createPage({
             path: `${replacePath(slug)}.html`,
+            matchPath: replacePath(slug),
             component: BlogPostTemplate,
             context: {
                 id: node.id,
@@ -639,6 +650,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { documentation } = node.frontmatter
         createPage({
             path: `${slug}.html`,
+            matchPath: slug,
             component: AppTemplate,
             context: {
                 id: node.id,
@@ -652,6 +664,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { documentation } = node.frontmatter
         createPage({
             path: `${slug}.html`,
+            matchPath: slug,
             component: PipelineTemplate,
             context: {
                 id: node.id,
@@ -664,6 +677,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
         const { slug } = node.fields
         createPage({
             path: `${slug}.html`,
+            matchPath: slug,
             component: DashboardTemplate,
             context: {
                 id: node.id,
@@ -700,6 +714,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
             }
             createPage({
                 path: `${slug}.html`,
+                matchPath: slug,
                 component: Job,
                 context: {
                     id,
@@ -716,6 +731,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
     result.data.roadmapYears.group.forEach(({ fieldValue: year }) => {
         createPage({
             path: `/changelog/${year}.html`,
+            matchPath: `/changelog/${year}`,
             component: ChangelogTemplate,
             context: {
                 year: Number(year),
@@ -726,6 +742,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions: { create
     result.data.teams.nodes.forEach(({ id, frontmatter: { title }, fields: { slug } }) => {
         createPage({
             path: `${slug}.html`,
+            matchPath: slug,
             component: TeamTemplate,
             context: {
                 id,
